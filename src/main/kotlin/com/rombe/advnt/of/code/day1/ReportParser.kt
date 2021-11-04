@@ -29,7 +29,7 @@ fun findTwoEntriesForSum(fileName: String, sumResult: Int = 2020): Pair<Int, Int
         }
     }
 
-    throw Exception("Can't found number for $sumResult")
+    throw Exception("Can't found numbers for sum $sumResult in file $pathToData")
 }
 
 fun main() {
