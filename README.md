@@ -9,9 +9,9 @@ Tasks from [advent of code 2020](https://adventofcode.com/2020)
 <b>Solution:</b> Function `findTwoEntriesForSum`
 in [ReportParser.kt](src/main/kotlin/com/rombe/advnt/of/code/year2020/day1/ReportParser.kt)
 </details>
-**Solution:** Function `findTwoEntriesForSum` in [ReportParser.kt](src/main/kotlin/com/rombe/advnt/of/code/day1/ReportParser.kt)
 
-## Day 2
-**Task:** Each line gives the password policy and then the password. 
-The password policy indicates the lowest and highest number of times a given letter must appear for the password to be valid.
-**How many passwords are valid?**
+<details>
+<summary><b>Day 2</b></summary>
+<b>Task:</b> Each line gives the password policy and then the password. 
+The password policy indicates the lowest and highest number of times a given letter must appear for the password to be valid. <b>How many passwords are valid?</b>
+</details>
