@@ -14,3 +14,11 @@ repositories {
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "11"
 }
+
+tasks.withType<Test> {
+    useJUnitPlatform()
+}
+
+dependencies {
+    testImplementation("io.kotest:kotest-runner-junit5:5.0.3")
+}

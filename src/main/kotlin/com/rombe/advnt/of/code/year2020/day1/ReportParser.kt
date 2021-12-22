@@ -5,7 +5,7 @@ import java.nio.file.Files
 import java.nio.file.Path
 import kotlin.io.path.notExists
 
-fun findTwoEntriesForSum(fileName: String, sumResult: Int = 2020): Pair<Int, Int> {
+fun findTwoEntriesForSum(fileName: String, sumResult: Int): Pair<Int, Int> {
     val pathToData = Path.of(fileName)
 
     if (pathToData.notExists()) {
@@ -30,10 +30,4 @@ fun findTwoEntriesForSum(fileName: String, sumResult: Int = 2020): Pair<Int, Int
     }
 
     throw Exception("Can't found numbers for sum $sumResult in file $pathToData")
-}
-
-fun main() {
-    val result = findTwoEntriesForSum(fileName = "./src/main/resources/input/day1.txt").let { it.first * it.second }
-
-    println(result)
 }
