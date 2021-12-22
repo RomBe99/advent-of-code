@@ -1,4 +1,4 @@
-package com.rombe.advnt.of.code.day1
+package com.rombe.advnt.of.code.year2020.day1
 
 import java.io.FileNotFoundException
 import java.nio.file.Files
