@@ -1,29 +1,22 @@
 package com.rombe.advnt.of.code.year2020.day1
 
-import java.io.FileNotFoundException
-import java.nio.file.Files
 import java.nio.file.Path
-import kotlin.io.path.notExists
+import kotlin.io.path.bufferedReader
 
-fun findTwoEntriesForSum(fileName: String, sumResult: Int): Pair<Int, Int> {
-    val pathToData = Path.of(fileName)
+fun findTwoEntriesForSum(pathToData: Path, sumResult: Int): Pair<Int, Int> {
 
-    if (pathToData.notExists()) {
-        throw FileNotFoundException("File by $pathToData not found")
-    }
-
-    Files.newBufferedReader(pathToData)?.use { reader ->
+    pathToData.bufferedReader().use { reader ->
         var number = reader.readLine()?.toInt()
-        val numbers = mutableMapOf<Int, Int>()
+        val numbers = HashMap<Int, Int>()
 
         while (number != null) {
             val temp = numbers[number]
 
-            if (temp == null) {
-                numbers[sumResult - number] = number
-            } else {
+            if (temp != null) {
                 return number to temp
             }
+
+            numbers[sumResult - number] = number
 
             number = reader.readLine()?.toInt()
         }
